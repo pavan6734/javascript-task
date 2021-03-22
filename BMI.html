@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmi</title>
+</head>
+<body>
+    <div>
+        <h1>BMI Calculator</h1>
+        <p>Height</p>
+        <input type="text" id="h" >
+        <p>Weight</p>
+        <input type="text" id="w" >
+        <p id="result" ></p>
+        <button id="btn" onclick="BMI()" >calculate</button>
+        
+    </div>
+    <script>
+        function BMI()
+        {
+           var h=document.getElementById("h").value;
+           var  w=document.getElementById("w").value;
+           var bmio=w/(h/100*h/100);
+          document.getElementById('result').innerHTML= '<h3>bmi is :</h3>'+ bmio;
+        }
+
+document.write('<h3>largest word in a string</h3>')
+
+    function find_longest_word(pavan)
+    {
+  var array1 = pavan.match(/\w[a-z]{0,}/gi);
+  var result = array1[0];
+
+  for(var x = 1 ; x < array1.length ; x++)
+  {
+    if(result.length < array1[x].length)
+    {
+    result = array1[x];
+    } 
+  } 
+  return result;
+}
+document.write(find_longest_word('Web Development Tutorial'));
+document.write('<br>')
+
+document.write('<h3> GST calculation</h3>')
+
+function gst(a=18)
+{
+   
+    var price=1000;
+     var totoal_price=price+(price*a/100);
+ 
+   return totoal_price;
+}
+
+  document.write( gst());
+  document.write('<br>')
+
+document.write("<h3> Given number is prime or not</h3>")
+
+  function test_prime(n)
+{
+
+  if (n===1)
+  {
+    return false;
+  }
+  else if(n === 2)
+  {
+    return true;
+  }else
+  {
+    for(var x = 2; x < n; x++)
+    {
+      if(n % x === 0)
+      {
+        return false;
+      }
+    }
+    return true;  
+  }
+}
+
+document.write(test_prime(prompt('enter prime or not number' )));
+
+
+</script>
+</body>
+</html>
