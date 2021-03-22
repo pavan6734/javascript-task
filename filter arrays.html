@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter array</title>
+</head>
+<body>
+    <h3>all elements af an array value is less than 30</h3>
+    <script>
+    function pavan(value) {
+        return value > 30
+      }
+      
+      let arr = [23,45,67,89,12,34,30,22].filter(pavan)
+      document.write("less than 30 elements:  ["+arr+']');
+
+    </script>
+    <br><br>
+
+<h1> two inpuit feilds</h1>
+
+
+<script>
+    function sync()
+    {
+      var n1 = document.getElementById('n1');
+      var n2 = document.getElementById('n2');
+      n2.value = n1.value;
+    }
+    </script>
+
+<input type="text" name="n1" id="n1" onkeyup="sync()">
+<input type="text" name="n2" id="n2"/>
+
+    
+</body>
+</html>
