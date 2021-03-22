@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-document.write("<h3> a Program to print all even numbers from 1 to 100</h3>");
+        document.write("<h3> a Program to print all even numbers from 1 to 100</h3>");
         for(var i=1;i<=100;i++)
         {
             if(i%2==0)
@@ -17,22 +17,22 @@ document.write("<h3> a Program to print all even numbers from 1 to 100</h3>");
         }
         document.write('<h3>a Program to check a number is palindrome or not</h3>');
         var n=prompt('Enter youe number to check polindrom are not');
-        document.write('Enter n value'+n + '<br>');
+        // document.write('Enter n value'+n + '<br>');
         var a,b,temp;
           temp=0;
           b=n;
         while(n>0)
         {
             a=n%10;
-            document.write(' a value  '+a+'<br>');
+            // document.write(' a value  '+a+'<br>');
             n=parseInt(n/10);
-            document.write(' n value  '+n+'<br>');
-            document.write(' temp value  '+temp+'<br>');
+            // document.write(' n value  '+n+'<br>');
+            // document.write(' temp value  '+temp+'<br>');
             temp=temp*10+a;
-            document.write(' temp  final value  '+temp+'<br>');
+            // document.write(' temp  final value  '+temp+'<br>');
            
         }
-        document.write(' temp value  '+temp+'<br>');
+        // document.write(' temp value  '+temp+'<br>');
         if(temp==b)
         {
             document.write("Given number is polindrom");
@@ -81,21 +81,40 @@ document.write("<br>");
 document.write("<h3> a program to check whether ‘pineapple’ is present in an array</h3>");
 var array=['apple','banana','pineaple','mango'];
 // document.write('length:'+array.length+"<br>");
-var fruit=prompt("enter array value");
-document.write(fruit+"<br>");
+// var fruit=prompt("enter array value");
+// document.write(fruit+"<br>");
 
-for(var i=0;i<array.length;i++)
-{
-    if(fruit==array[i])
-    {
-        document.write('true');
-        if(fruit!==array[i])
-        {
-            document.write("false");
-        }
+// for(var i=0;i<array.length;i++)
+// {
+//     if(fruit==array[i])
+//     {
+//         document.write('true');
+//         if(fruit!==array[i])
+//         {
+//             document.write("false");
+//         }
        
+//     }
+// }
+ 
+ fruits = prompt("enter the fruit name");
+    var array=["apple", "pinaple","mango","orange"]
+   
+    // Check if a value exists in the fruits array
+    if(fruits !== array){
+        document.write("Value exists!")
+    } else{
+        document.write("Value does not exists!")
     }
-}
+
+
+
+
+
+
+
+
+
 document.write("<h3>leap year</h3>");
 n=prompt("enter year");
 
