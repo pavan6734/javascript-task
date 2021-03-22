@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fb rstform</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        .div
+        {
+            /* border: 1px solid red; */
+            padding: 10px;
+            margin-right: 60%;
+            background-color: rgb(211, 204, 204);
+            padding-left: 50px;
+            margin-left: 50px;
+            
+        }
+        #fname
+        {
+            height: 22px;
+            /* border: 1px solid red; */
+        }
+        #lname
+        {
+            height: 22px;
+        }
+        #mail1
+        {
+            width: 82%;
+            height: 22px;
+            
+        }
+        #pwd
+        {
+            width: 82%;
+            height: 22px;
+        }
+        #pa
+        {
+            
+            height: 24px;
+            width: 71px;
+        }
+        #bp
+        {
+            height: 24px;
+            width: 71px;
+        }
+        #mnt
+        {
+            height: 24px;
+            width: 71px;
+        }
+        #yer
+        {
+            height: 24px;
+            width: 71px;
+        }
+        #gdr
+        {
+            height: 24px;
+            width: 100px;
+
+        }
+        #gdr1
+         {
+                position: absolute;
+                left: 14%;
+                top: 468px;
+        }
+        #gdr2
+        {
+            position: absolute;
+            left: 417px;
+            top: 468px;
+        }
+        
+        #gdr3
+        {
+            position: absolute;
+            left: 22%;
+            top: 468px;
+
+        }
+        
+        #btn1
+        {
+            margin-left: 128px;
+            width: 150px;
+            height: 40px;
+            background-color: rgb(138, 135, 130);
+            opacity: 0.9;
+        }
+        #btn1:hover
+        {
+            background-color: green;
+            opacity: 1;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div class="div">
+        <form name="fbregistration" action="achieversit.com" method="POST"   >
+        <h1>Sign Up</h1>
+        <p>It's quick and easy</p>
+        <input  type="text" name="Firstname" placeholder="enter fname" id="fname" minlength="4" maxlength="8"  >
+        <input type="text" name="lastname" placeholder="enter lname" id="lname" minlength="4" maxlength="8"><br><br>
+        <input type="mail" name="email1" placeholder="enter mail" id="mail1" required><br><br>
+        <input type="password"name="password" id="pwd" placeholder="enter password" ><br><br>
+        Your age: <i class="fa fa-question-circle" aria-hidden="true"></i><br><br>
+        <select name="age" id="pa"></select>
+        
+        <br>
+    <script>
+        let ageOptions = " ";
+        for(let i=1; i<=100 ; i++)
+        {
+            ageOptions += `<option>${i}</option>`;
+            
+        } 
+      document.querySelector('[name=age]').innerHTML = ageOptions;
+    
+</script>
+<br>
+Date of Birth:<i class="fa fa-question-circle" aria-hidden="true"></i><br><br>
+<select name="date" id="bp" ></select>
+   <script>
+    let pavan = " ";
+    
+    for(let i=1; i<=31; i++)
+    {
+        
+       pavan += `<option >${[i]}</option>`;
+
+        
+    } 
+  document.querySelector('[name=date]').innerHTML = pavan;
+
+</script>
+
+<select name="month" id="mnt">
+    <option value="0">month</option>
+    <option value="1">jan</option>
+    <option value="2">feb</option>
+    <option value="3">march</option>
+    <option value="4">april</option>
+    <option value="5">may</option>
+    <option value="6">june</option>
+    <option value="7">july</option>
+    <option value="8">august</option>
+    <option value="9">sep</option>
+    <option value="10">oct</option>
+    <option value="11">nov</option>
+    <option value="12">dec</option>
+</select>
+<select name="year" id="yer"></select>
+<script>
+   
+    let pavan1 = " ";
+    
+    for(let i=1950; i<=2021; i++)
+    {
+        
+       pavan1 += `<option >${[i]}</option>`;
+
+        
+    } 
+  document.querySelector('[name=year]').innerHTML = pavan1;
+
+</script>
+<br><br>
+<label for="gender">Gender  <i class="fa fa-question-circle" aria-hidden="true"></i></label><br><br>
+<input type="text" name="gender"placeholder="male" id="gdr" >
+<input type="text" name="gender" placeholder="female" id="gdr" >
+<input type="text" name="gender" placeholder="custom"  id="gdr">
+<input type="radio" name="gender"placeholder="male"  id="gdr1" >
+<input type="radio" name="gender" placeholder="female" id="gdr2" >
+<input type="radio" name="gender" placeholder="custom" id="gdr3" >
+<p id="gen"></p>
+   <p>By clicking Sign Up , you agree to our Terms of Use , Data Policy and Cookies Policy . 
+       You can receive SMS notifications from us and withdraw the option at any time.</p>         
+        <br><br>
+      <button id="btn1" onclick=" return formvalidate(event)" >Sign Up</button>
+      <br><br><br>
+      <script>
+          function formvalidate(e)
+          {
+              e.preventDefault();
+              var firstname=document.getElementById('fname').value;
+              var lastname=document.getElementById('lname').value;
+              var email=document.getElementById('mail1').value;
+              var password=document.getElementById('pwd').value;
+              var gender = document.getElementsByName('gender');
+              var genValue=false;
+              
+              var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+              var letters = /^[A-Za-z]+$/;
+              var  pwd_expression= /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+             
+
+              if(firstname=='')
+              {
+                 
+                  document.getElementById('fname').style.border='1px solid red';
+                  document.getElementById('fname').focus( );
+                  return false;
+              }else
+              {
+                document.getElementById('fname').style.border='1px solid green'; 
+              }
+
+              if ( !letters.test(document.getElementById("fname").value)) {
+        
+                document.getElementById('fname').style.borderColor = "red";
+                return false;
+                }
+                else{
+                document.getElementById('fname').style.borderColor = "green";
+                }
+
+              if(lastname=='')
+              {
+                
+                  document.getElementById('lname').style.border='1px solid red';
+                  document.getElementById('lname').focus( );
+                  return false;
+              }else
+              {
+                document.getElementById('lname').style.border='1px solid green'; 
+              }
+              if (!letters.test(document.getElementById("lname").value)) {
+        
+                document.getElementById('lname').style.borderColor = "red";
+                 return false;
+             }else{
+                document.getElementById('lname').style.borderColor = "green";
+                }
+
+              if(email=='')
+              {
+                
+                  document.getElementById('mail1').style.border='1px solid red';
+                  document.getElementById('mail1').focus( );
+                  return false;
+              }else
+              {
+                document.getElementById('mail1').style.border='1px solid green'; 
+              }
+
+               if(!filter.test(document.getElementById('mail1').value))
+		        {
+                    document.getElementById('mail1').style.border='1px solid red';
+                    return false;
+		        }
+		        else  
+		        {
+                    document.getElementById('mail1').style.border='1px solid green';
+		         }
+
+      
+
+             if(password=='')
+              {
+    
+                  document.getElementById('pwd').style.border='1px solid red';
+                  
+                  document.getElementById('pwd').focus( );
+                  
+                  return false;
+              }
+              else
+              {
+                document.getElementById('pwd').style.border='1px solid green'; 
+              }
+
+              if ( !pwd_expression.test(document.getElementById("pwd").value))
+               {
+        
+                document.getElementById('pwd').style.borderColor = "red";
+                 return false;
+             }
+            else{
+            document.getElementById('pwd').style.borderColor = "green";
+            }
+            for (var i = 0; i < gender.length; i++) {
+                if (gender[i].checked == true) {
+                    genValue = true;
+                }
+            }
+
+            if (!genValue) {
+                //alert("Please Choose the gender");
+                document.getElementById("gen").innerHTML = "please choose a gender";
+                document.getElementById("gen").style = "color : red";
+
+                return false;
+            }
+            
+            else {
+                document.getElementById("gen").innerHTML = "";
+                alert("Form Submitted Successfully");
+                return true;
+
+            }
+         
+        
+        
+ }
+ 
+
+          
+      </script>
+    </form>
+    </div>   
+    
+</body>
+</html>
