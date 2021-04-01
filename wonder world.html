@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wonder world</title>
+    <style>
+        
+        #parent{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+               
+        }
+        
+        img
+         {
+            height: 100px;
+            width: 256px;
+        }
+        figure{
+            height: 87%;
+            width: 76%;
+            background-color: rgb(180, 165, 165);
+        }
+       .desc 
+        {
+            padding-left: 10px;
+        }
+        h1{
+            text-align: center;
+            color: red;
+           
+        
+            
+        }
+       
+ </style>
+</head>
+<body>
+    <h1> 7 WONDER WORLDS</h1>
+    <header id="pk"></header>
+   
+   
+<script>
+    let world='';
+    let wonder=[
+        {
+            image:'Colosseum.jpg',
+            name:' <b>Title:</b>Colosseum',
+            cuntry:'<b>Country:</b>Italy',
+            desc:'<b>desc:</b>The Colosseum is the world’s largest amphitheatre'
+        },
+        {
+            image:'Pyramids-of-Giza.jpg',
+            name:'<b>Title:</b>Pyramids',
+            cuntry:'<b>Country:</b>Egypt',
+            desc:'<b>desc:</b>The largest of the Great Pyramids was built by the 4th dynasty Egyptian Pharaoh, Khufu, around 3000 years ago and consists of an estimated 2.3 million blocks.'
+        },
+        {
+            image:'The-Treasury-at-Petra-.jpg',
+            name:'<b>Title:</b>Petra',
+            cuntry:'<b>Country:</b>Jordan',
+            desc:'<b>desc:</b>Amongst the mountains of the Arabah valley in southern Jordan lies the ancient Rose City of Petra.'
+         },
+        {
+            image:'tajmahal.jpg',
+            name:'<b>Title:</b>tajmahal',
+            cuntry:'<b>Country:</b>India',
+            desc:'<b>desc:</b>The “Crown Jewel of India” was built in the mid 1600s for the Mughal emperor'
+        },
+        {
+            image:'Great-Wall-of-China-.jpg',
+            name:'<b>Title:</b>The Great Wall of China',
+            cuntry:'<b>Country:</b> China',
+            desc:'<b>desc:</b> ancient pathways of the Great Wall of China'
+        },
+        {
+            image:'El-Castillo-at-Chichen-Itza.jpg',
+            name:'<b>Title:</b>El-Castillo-at-Chichen-Itza',
+            cuntry:'<b>Country:</b>Mexico',
+            desc:'<b>desc:</b>The iconic Mayan ruins of Chichen Itza in Mexico’s Yucatan Peninsula are remarkably well preserved.'
+        },
+        {
+            image:'Machu-Picchu-Citadel.jpg',
+            name:'<b>Title:</b>Machu-Picchu-Citadel',
+            cuntry:'<b>Country:</b> Peru',
+            desc:'<b>desc:</b>Machu Picchu is one of the world’s most famous archaeological sites'
+        },
+        {
+            image:'Christ-the-Redeemer.jpg',
+            name:'<b>Title:</b>Christ-the-Redeemer',
+            cuntry:'<b>Country:</b>Brazil',
+            desc:'<b>desc:</b>Brazil’s second largest city and host of the 2016 Olympics.'
+        },
+        
+    ];
+
+        
+            function validate()
+            {
+                world +=`<div id="parent">`
+                for(i=0;i<wonder.length;i++)
+                {
+            
+                world +=`<figure >
+                <img src="../${wonder[i].image}">
+                 <div class="desc"> ${wonder[i].name}</div>
+                 <div class="desc">${wonder[i].cuntry}</div>
+                <div class="desc">${wonder[i].desc}</div>`
+                world +=` </figure>`
+                }
+            world +=`<div>`;
+                document.getElementById('pk').innerHTML=world;
+            }
+            validate();
+   
+    
+</script>
+    
+</body>
+</html>
