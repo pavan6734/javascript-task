@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test6</title>
+</head>
+<body>
+    <script>
+   
+        let arrOfObj=[
+            {
+                name:'pavan',
+                phone:'9898603829',
+                address:'bangalore',
+                email:'pavan@gmail.com',
+                country:'india '
+            },
+            
+            {
+                name:'pavan',
+                phone:'9898603829',
+                address:'bangalore',
+                email:'pavan@gmail.com',
+                country:'india'
+            },
+            {
+                name:'pavan',
+                phone:'9898603829',
+                address:'bangalore',
+                email:'pavan@gmail.com',
+                country:'india'
+            },
+            {
+                name:'pavan',
+                phone:'9898603829',
+                address:'bangalore',
+                email:'pavan@gmail.com',
+                country:'india'
+            },
+            {
+                name:'pavan',
+                phone:'9898603829',
+                address:'bangalore',
+                email:'pavan@gmail.com',
+                country:'india'
+            },
+            {
+                name:'pavan',
+                phone:'9898603829',
+                address:'bangalore',
+                email:'pavan@gmail.com',
+                country:'india'
+            },
+            {
+                name:'pavan',
+                phone:'9898603829',
+                address:'bangalore',
+                email:'pavan@gmail.com',
+                country:'india'
+            },
+        ];
+        document.write(arrOfObj);
+   
+        document.write("<h3>find the maximum number in an array</h3>")
+        
+        var array=[23,45,12,34,455,66,45,21,127];
+       var largest= 0;
+
+        for (i=0; i<=array.length;i++)
+        {
+         if (array[i]>largest) 
+         {
+          var largest=array[i];
+         }
+        }
+ document.write("maximum value is  "+largest+"<br>");
+
+ document.write('<h3>two number in which there  sum should be  equal to 10  of an array</h3>')
+
+ var arr,i,j,n,sum,newArray;
+ arr=[2,3,5,7,9,0];
+ newArray=[];
+ function pavan(a,n){
+     for(i=0;i<a.length;i++)
+     {
+         for(j=i+1;j<a.length;j++)
+         {
+             if(a[i]+a[j]==n){
+                 newArray.push([a[i],a[j]]);
+             }
+         }
+     }
+ }
+ pavan(arr,10);
+ document.write('['+newArray+']');
+
+
+
+    </script>
+    
+</body>
+</html>

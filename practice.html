@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+     <h1>gst</h1>
+    <script>
+    
+    function pavan(a=18)
+    {
+        var price=1000;
+        var totol_price;
+        var result=price+(price*a/100);
+        return result;
+      
+    }
+   document.write( pavan());
+
+    </script>
+    <h1>maths table</h1>
+    <script>
+        var nums=prompt('enter value')
+        for(var i=1;i<=10;i++){
+            result=nums*i;
+            document.write("<br>")
+        document.write(`${nums}*${i}=${result}`);
+        }
+       
+    </script>
+    <h1>polindrome</h1>
+    <script>
+        var n=prompt('enter number');
+        document.write('n value is '+n);
+        document.write('<br>');
+        var a,b, temp;
+        temp=0;
+        b=n;
+       
+        document.write('b value is'+b);
+        document.write('<br>')
+        while(n>0)
+        {
+            a=n%10;
+            document.write('a value is  ' +a)
+            document.write('<br>')
+            n=parseInt(n/10);
+            document.write( 'n value is'+n);
+            
+            document.write('<br>')
+            temp=temp*10+a;
+          
+            document.write( 'temp value is '+temp);
+            document.write("<br>")
+        }
+       
+        if(temp==b)
+        {
+           document.write('given number is polindrome');
+
+        }
+        else{
+            document.write('given number is not polindrome')
+        }
+
+
+
+
+    </script>
+    <script>
+    
+     function x(){
+        
+        console.log("AchieversIT");
+        
+        }
+        document.write(x());
+        
+       
+
+
+        const  value = true? one : two;
+        console.log(value);
+
+       
+
+        
+    </script> 
+    <br>
+     <script>
+        // let x=205.95256789;
+        // document.write(Math.floor(x)+'<br>');
+        // document.write(Math.ceil(x)+'<br>');
+        // document.write(Math.round(x)+'<br>');
+        // document.write(Math.random(x));
+        
+        //  var val = Math.floor(1000 + Math.random() * 9000);
+         document.write(Math.floor(1000+Math.random()*9000)+'<br>');
+        document.write(Math.floor(1000+Math.random()*90000000));
+        //  document.write(val); 
+
+
+       
+
+    </script> 
+    <script>
+          
+    //    var date=new Date();
+         
+    //     var cr = "\n";
+    //     var str = date.formatDate("yyyy-MM-dd HH:mm") + cr +
+    //      date.formatDate("MM/dd/yyyy hh:mm t") + cr + 
+    //      date.formatDate("MM-yyyy hh:mmt") ;
+             
+          
+    //     document.write(str);
+
+
+        var pavan=new Date();
+        document.write(formatDate(pavan)+"<br>");
+        function formatDate(pd){
+            var date=pd.getDate();
+            var month=pd.getMonth();
+            month++;
+            var year=pd.getFullYear();
+            return '<h3>DMY:</h3>'+ date+"-"+month+"-"+year;
+          
+        
+        }
+      
+
+        var pavan=new Date();
+        document.write(pk(pavan)+"<br>");
+        function pk(pd){
+            var month=pd.getMonth();
+            month++;
+            var date=pd.getDate();
+           var year=pd.getFullYear();
+            return '<h3>MDY:</h3>'+ month+"-"+date+"-"+year;
+        }
+
+            var pavan=new Date();
+        document.write(pb(pavan)+"<br>");
+        function pb(pd){
+            var year=pd.getFullYear();
+            var month=pd.getMonth();
+            month++;
+            var date=pd.getDate();
+           
+            return '<h3>YMD:</h3>'+ year+"-"+month+"-"+date;
+        
+        }
+       
+      
+    </script>
+<br>
+    
+    <script>
+        var a=100;
+        var b=200;
+       
+        var a=a+b;
+        document.write(a+'<br>');
+        var b=a-b;
+        document.write(b+'<br>');
+        var a=a-b;
+        document.write(a+'<br>');
+</script>
+<script>
+var n=prompt('enter number')
+if(n%7==0)
+{
+    document.write('given number is divisible by 7');
+}
+else{
+    document.write(' given number is not divisible')
+}
+</script>
+</body>
+</html>

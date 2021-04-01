@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        th,td{
+            padding: 10px;
+            text-align: left;
+            border: 1px solid black;
+        }
+        table{
+            width: 100%;
+            /* border-collapse: collapse;            */
+        }
+    </style>
+    
+</head>
+<body>
+<h1>	Write a JavaScript Program to Move all zeros to right side</h1>
+<script>
+    
+    var arr = [2,4,0,5,0,6,0,0,9,7];
+    var a = 0;
+    for (let i = 0; i < arr.length; i++)
+    {
+        if(arr[i] !== 0)
+        {
+        arr[a++] = arr[i];
+        }
+    }
+    for (let i = a; i < arr.length; i++)
+    {
+    arr[i] = 0;
+    }
+    document.write("["+arr+"]"+"<br>" );  
+
+
+
+    document.write('<h1> two input feild first input content copy the same content in second field </h1>')
+    function sync()
+    {
+      var n1 = document.getElementById('n1');
+      var n2 = document.getElementById('n2');
+      n2.value = n1.value;
+    }
+    </script>
+
+<input type="text" name="n1" id="n1" ><br><br>
+<input type="text" name="n2" id="n2"/><br><br>
+<button onclick="sync()">click</button>
+
+
+
+<script>
+    document.write('<br>')
+    document.write('<h1>	Remove duplicates values from the  given array and return the new array</h1>')
+var arr = ['a','b', 'c', 'c','d','e','e','e'];
+
+let uniqueChars = arr.filter((c, index) => {
+    return arr.indexOf(c) === index;
+});
+
+document.write('['+uniqueChars+']');
+
+</script>
+ <br><br>
+
+
+<h1>dynamic table</h1>
+<script>
+    var table;
+    table=[
+        {
+            id:'1',
+            name:'ramesh',
+            Emailid:'ramesh@gmail.com',
+            address:'bangalore',
+        },
+        {
+            id:'2',
+            name:'rakesh',
+            Emailid:'rakesh@gmail.com',
+            address:'hyderabad',
+        },
+        {
+            id:'1',
+            name:'rajesh',
+            Emailid:'rajesh@gmail.com',
+            address:'chennai',
+        },
+    ];
+    var tablehtml=`<table  >
+                    <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>emailid</th>
+                    <th>address</th>`;
+    for(i=0;i<table.length;i++)
+    {
+    tablehtml+=`<tr >
+                <td>${table[i].id}</td>
+                <td>${table[i].name}</td>
+                <td>${table[i].Emailid}</td>
+                <td>${table[i].address}</td>
+                </tr>`
+    }
+    tablehtml+=`</table>`;
+    document.write(tablehtml);
+
+document.write('<h3>	Write a JavaScript Program that loop from 0 to 15 and outputting “fizz” at multiples of 5 , “buzz” at multiples of 3 and “Fizz Buzz” at multiple of 3 and 5 remaining all are outputting numbers </h3>')
+
+for ( var i = 1; i<= 15; i++) {  //Lists numbers to 100
+
+    
+if (i % 15 === 0 ) {  //if number is divisible by 5 or 3 prints FizzBuzz
+    console.log("FizzBuzz") }
+else if (i % 5 === 0) { //if number is divisible by 5 prints Buzz
+    console.log("Buzz") }
+else if (i % 3 === 0 ) { //if number is divisible by 3 prints Fizz
+    console.log("Fizz") }
+else {
+    console.log(i) } // if neither prints the number
+
+}
+</script>
+</body>
+</html>
